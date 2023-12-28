@@ -240,7 +240,7 @@ footer {
   text-align: right;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 490px) {
   .megane img {
    width: 55px; 
   }
@@ -250,7 +250,7 @@ footer {
   }
 }
 
-@media (min-width: 375.1px) {
+@media (min-width: 490.1px) {
   .Towa li img {
     height: 700px;
   }
