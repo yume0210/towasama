@@ -1,0 +1,360 @@
+body {
+  background-image: url("img/Towa_background.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: rgba(226, 151, 229, 0.6);
+  background-blend-mode: lighten;
+  margin: 0;
+  font-family: verdana, sans-serif;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.7);
+  background-blend-mode: lighten;
+  display: flex;
+  padding: 0 16px;
+}
+
+.sp-menu {
+  margin-left: auto;
+}
+
+.sp-menu #open {
+  font-size: 32px;
+  line-height: 45px;
+  cursor: pointer;
+}
+
+.sp-menu #open.hide {
+  display: none;
+}
+
+main {
+  padding: 0 16px;
+  text-align: center;
+}
+
+h4 {
+  font-family: 'Kosugi Maru', sans-serif;
+  font-weight: normal;
+  background: rgba(248, 213, 246, 0.6);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.data {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.data p {
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 15px;
+  background:rgba(247, 201, 246, 0.8);
+  border-radius: 8px;
+  padding: 6px;
+}
+
+h2 {
+  font-family: 'Kosugi Maru', sans-serif;
+  color: rgb(251, 152, 248);
+  background: black;
+  padding: 6px;
+  border-radius: 12px;
+}
+
+h3 {
+  background: rgba(248, 213, 246, 0.6);
+  border-radius: 12px;
+  padding: 6px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(34, 14, 39, 0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+} 
+
+.overlay li {
+  margin: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+
+.overlay a {
+  color: white;
+  text-decoration: none;
+}
+
+.material-symbols-outlined#close {
+  color: white;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: .1s;
+}
+
+.overlay.show li:nth-child(2) {
+  transition-delay: .2s;
+}
+
+.overlay.show li:nth-child(3) {
+  transition-delay: .3s;
+}
+
+.fade {
+	opacity: 0;
+  padding: 24px 0 0;
+	transform: translateY(30px);
+	transition: opacity 1.5s, transform 1s;
+}
+
+.fade.active {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+.fade h2 {
+  margin: 0;
+}
+
+.songs {
+  /* width: 350px; */
+  margin: 16px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.songs img {
+  width: 350px;
+}
+
+.songs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* width: 100%; */
+  display: flex;
+  transition: transform .3s;
+}
+
+.song ul li {
+  /* width: 100%; */
+  min-width: 100%;
+}
+
+.song ul li img{
+  /* width: 100%; */
+  height: 100%;
+  object-fit: cover;
+}
+
+#prev,#next {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0, 0, 0, .7);
+  color: rgb(160, 250, 160);
+  font-size: 32px;
+  padding: 8px 4px 12px;
+  cursor: pointer;
+}
+
+#prev:hover,#next:hover {
+  opacity: 0.8;
+}
+
+#prev {
+  left: 0;
+}
+
+#next {
+  right: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  margin: 0;
+  padding: 12px;
+  text-align: center;
+}
+
+.pc-menu {
+  display: none;
+}
+
+.pc-ul {
+  display: none;
+}
+
+.LIVE img {
+  margin: auto;
+  width: 100%;
+  text-align: right;
+}
+
+@media (max-width: 375px) {
+  .megane img {
+   width: 55px; 
+  }
+
+  .Towa li img {
+    height: 515px;
+  }
+
+  .songs img {
+    width: 330px;
+  }
+}
+
+@media (min-width: 375.1px) {
+  .Towa li img {
+    height: 700px;
+  }
+}
+
+@media (min-width: 600px) {
+  .pc-menu {
+    display: block;
+    margin-left: auto;
+  }
+
+  .pc-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .pc-menu a {
+    color: black;
+    display: block;
+    width: 100px;
+    line-height: 64px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .pc-menu a:hover {
+    background: rgb(192, 249, 106);
+  }
+
+  .sp-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 720px) {
+  .LIVE {
+    display: none;
+  }
+
+  .aaa h2, .aaa h3 {
+    display: none;
+  }
+
+  .pc-ul {
+    display: block;
+  }
+  
+  .pc-ul img {
+    width: 100%;
+  }
+}
+
+.container {
+  display: flex;
+}
+
+.megane {
+  margin: 0;
+}
+
+.megane img{
+  margin: 0 ;
+  display: block;
+  padding: 6px 0 0;
+  cursor: pointer;
+}
+
+.megane img:hover {
+  opacity: 0.5;
+  transition: opacity 0.4s;
+}
+
+.Towa {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.Towa li img {
+  text-align: center;
+  max-height: 100%;
+} 
+
+.primg.active{
+  /* margin: 0 auto; */
+  display: block;
+  opacity: 1;
+}
+
+.primg {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.song button {
+  background: rgb(100, 226, 80);
+  color: white;
+  padding: 6px 15px;
+  display: inline-block;
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+.song button:hover {
+  opacity: .7;
+}
